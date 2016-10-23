@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Logger</title>
+	<style>
+		body {
+			background-color: black;
+			color: #009bd5;
+			font-family: arial;
+			font-size: 14px
+		}
+		
+		a {
+			color: #009bd5;
+			text-decoration: none
+		}
+		
+		a:hover {
+			color: white
+		}
+		
+		a:focus {
+			color: white
+		}
+		
+		.box {
+			background-color: black;
+			color: white;
+			font-size: 14px;
+			font-family: arial
+		}
+		
+		.title {
+			text-decoration: underline
+		}
+		
+		.down100 {
+			position: relative;
+			top: 100px
+		}
+		
+		#view_whoareyou {
+			display: block
+		}
+		
+		#view_logdetails {
+			display: none
+		}
+		
+		#node {
+			position: fixed;
+			top: 8px;
+			text-decoration: underline
+		}
+		
+		#what {
+			position: fixed;
+			top: 8px;
+			left: 198px;
+			text-decoration: underline
+		}
+		
+		#notify {
+			position: fixed;
+			top: 8px;
+			left: 455px;
+			text-decoration: underline
+		}
+		
+		#notify-options {
+			position: fixed;
+			top: 30px;
+			left: 455px
+		}
+		
+		#allLogs {
+			position: fixed;
+			top: 80px
+		}
+		
+		#view_alllogs {
+			display: none
+		}
+	</style>
+</head>
+
+<body onload="init()">
+	<div id="view_whoareyou">
+		<div id="whoText">who are you?</div>
+		</br>
+		<input id="you" class="box" type="text" onkeyup="enterWho(event)">
+	</div>
+	<div id="view_logdetails">
+		<div id="node">
+			<div id="nodeText">node:</div>
+			</br>
+			<input id="input_node" class="box" type="text" oninput="updateCurrentLog()">
+		</div>
+		<div id="what">
+			<div id="whatText">what:</div>
+			</br>
+			<textarea id="input_what" class="box" cols=31 rows=2 oninput="updateCurrentLog()"></textarea>
+		</div>
+		<div id="notify">notify:</div>
+		<div id="notify-options">
+			<a id="nobody" href="javascript:logIT()">nobody</a></br>
+			<a id="AllIT" href="javascript:logIT('AllIT')">All IT</a></br>
+			<a id="SMSIT" href="javascript:logIT('SMSIT')">SMSIT</a></br>
+		</div>
+		<div id="currentLog" class="down100">
+			<div class="title">Current Log:</div>
+			<div id="currentLogText"></div>
+		</div>
+		</br>
+		<div id="sessionLogs" class="down100">
+			<div class="title">Session Logs:</div>
+			<div id="sessionLogsText"></div>
+		</div>
+		<a id="allLogs" href="javascript:viewAllLogs()">View All Logs</a>
+	</div>
+	<div id="view_alllogs">
+		<div id="searchText" class="title">Search Logs:</div>
+		</br>
+		<input id="input_logsearch" class="box" type="text" oninput="searchLogs()"></br>
+		</br>
+		<div id="allLogsText"></div>
+	</div>
+</body>
+<script src="logger.js"></script>
+
+</html>
