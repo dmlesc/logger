@@ -1,0 +1,85 @@
+  body {
+  background-color: black;
+  color: #009bd5;
+  font-family: arial;
+  font-size: 14
+}
+
+a {
+  color: #009bd5;
+  text-decoration: none
+}
+
+input {
+  background-color: black;
+  color: white;
+  font-size: 14;
+  font-family: arial
+}
+
+textarea {
+  background-color: black;
+  color: white;
+  font-size: 14;
+  font-family: arial
+}
+
+#enter {
+  position: fixed;
+  top: 25;
+  left: 180
+}
+
+#oneFace {
+  display: none
+}
+
+#node {
+  position: fixed;
+  top: 8
+}
+
+#what {
+  position: fixed;
+  top: 8;
+  left: 193
+}
+
+#notify {
+  position: fixed;
+  top: 8;
+  left: 445
+}
+
+#nobody {
+  position: fixed;
+  top: 30;
+  left: 455;
+  color: white
+}
+
+#AllIT {
+  position: fixed;
+  top: 52;
+  left: 455;
+  color: white
+}
+
+#SMSIT {
+  position: fixed;
+  top: 74;
+  left: 455;
+  color: white
+}
+
+#display {
+  display: none;
+  position: fixed;
+  top: 30;
+  left: 5
+}
+
+#viewlogs {
+  position: fixed;
+  top: 74
+}
