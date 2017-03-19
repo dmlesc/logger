@@ -105,7 +105,7 @@ function timer() { timerRecur(); }
 function timerRecur() {
   if (seconds < 2) {
     seconds++;
-    timerOn = setTimeout("timerRecur()",1000);
+    timerOn = setTimeout("timerRecur()", 1000);
   }
   else
     timerStop();
@@ -123,14 +123,14 @@ function moveRight() { moveRightRecur(); }
 function moveRightRecur() {
   if (moves < moveSteps) {
     moves += moveRate;
-    getID("display").style.left = moves;
+    getID("display").style.left = moves + 'px';
     moveRightOn = setTimeout("moveRightRecur()", 5);
   }
   else {
     clearTimeout(moveRightOn);
     moves = 5;
     hideID("display");
-    getID("display").style.left = moves;
+    getID("display").style.left = moves + 'px';
   }
 }
 function moveUp() {
@@ -139,14 +139,14 @@ function moveUp() {
 function moveUpRecur() {
   if (moveUpCur > -20) {
     moveUpCur--;
-    getID("display").style.top = moveUpCur;
-    moveUpOn = setTimeout("moveUpRecur()",5);
+    getID("display").style.top = moveUpCur + 'px';
+    moveUpOn = setTimeout("moveUpRecur()", 5);
   }
   else {
     clearTimeout(moveUpOn);
     moveUpCur = 30;
     hideID("display");
-    getID("display").style.top = moveUpCur;
+    getID("display").style.top = moveUpCur + 'px';
     backToFace();
   }
 }
@@ -163,7 +163,7 @@ function resizeSmall(id) {
 function resizeFocusSmallRecur() {
   if (focusFontSizeSmall > 14) {
     focusFontSizeSmall -= focusResizeRate;
-    getID(currentFocusSmall).style.fontSize = focusFontSizeSmall;
+    getID(currentFocusSmall).style.fontSize = focusFontSizeSmall + 'px';
     focusResizeSmallOn = setTimeout("resizeFocusSmallRecur()", 3);
   }
   else {
@@ -178,7 +178,7 @@ function resizeBig(id) {
 function resizeFocusBigRecur() {
   if (focusFontSizeBig < 18) {
     focusFontSizeBig += focusResizeRate;
-    getID(currentFocusBig).style.fontSize = focusFontSizeBig;
+    getID(currentFocusBig).style.fontSize = focusFontSizeBig + 'px';
     focusResizeBigOn = setTimeout("resizeFocusBigRecur()", 3);
   }
   else {
